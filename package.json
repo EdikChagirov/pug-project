@@ -1,0 +1,8 @@
+{
+  "name": "pug-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:EdikChagirov/pug-project.git",
+  "author": "Edward Chagirov <echagirov@simtechdev.com>",
+  "license": "MIT"
+}
