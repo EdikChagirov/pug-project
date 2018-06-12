@@ -1,3 +1,5 @@
+// Nodule for includes other CSS module. Not yet used.
+
 module.exports = function(paths) {
     return {
         module: {

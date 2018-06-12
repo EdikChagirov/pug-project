@@ -1,5 +1,6 @@
 module.exports = function(paths) {
     return {
+        mode: 'none',
         module: {
             rules: [
                 {
