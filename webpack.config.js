@@ -1,9 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const devserver = require('./webpack/devserver');
 const pug = require('./webpack/pug');
 const sass = require('./webpack/sass');
+const extractCSS = require('./webpack/css.extract');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -30,7 +32,7 @@ const common = merge([
                 filename: 'blog.html',
                 chunks: ['blog'],
                 template: PATHS.source + '/pages/blog/blog.pug'
-            })
+            }),
         ]
     },
     pug()
@@ -38,7 +40,10 @@ const common = merge([
 
 module.exports = function(env) {
     if (env === 'production') {
-        return common;
+        return merge([
+            common,
+            extractCSS()
+        ]);
     }
 
     if (env === 'development') {

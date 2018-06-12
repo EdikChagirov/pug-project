@@ -1,15 +1,15 @@
+// Nodule for includes other CSS module. Not yet used.
+
 module.exports = function(paths) {
     return {
-        mode: 'none',
         module: {
             rules: [
                 {
-                    test: /\.scss$/,
+                    test: /\.css$/,
                     include: paths,
                     use: [
                         'style-loader',
-                        'css-loader',
-                        'sass-loader'
+                        'css-loader'
                     ]
                 }
             ]
