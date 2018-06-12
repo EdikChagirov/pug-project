@@ -1,3 +1,4 @@
+import './style.scss';
 import createMenu from '../../components/menu/menu';
 
 var menu = createMenu(['Main', 'About us'], 'menu');
