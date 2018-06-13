@@ -6,8 +6,8 @@
   "author": "Edward Chagirov <echagirov@simtechdev.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --env development",
-    "build": "webpack --env production",
+    "start": "webpack-dev-server --env development --mode development --open",
+    "build": "webpack --env production --mode production",
     "serv": "static build"
   },
   "devDependencies": {
